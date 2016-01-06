@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Electron</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <main>
+      <ol class="wr-tablist" role="tablist">
+        <li id="main-tab" class="wr-tab" role="tab" aria-selected="true">ホーム</li>
+        <li id="console-tab" class="wr-tab" role="tab" aria-selected="false">コンソール</li>
+        <li id="browser-tab" class="wr-tab" role="tab" aria-selected="false">ブラウザー</li>
+      </ol>
+      <ol class="wr-tabpanels">
+        <li class="wr-tabpanel" role="tabpanel" aria-hidden="false" aria-describedby="main-tab">
+          <h1>Main Contents</h1>
+        </li>
+        <li class="wr-tabpanel" role="tabpanel" aria-hidden="true" aria-describedby="console-tab">
+          <form method="post" target="/cmd">
+            <input type="text" name="cmd" />
+            <input type="submit" value="Enter" />
+          </form>
+        </li>
+        <li class="wr-tabpanel" role="tabpanel" aria-hidden="true" aria-describedby="browser-tab">
+          <input class="js-iframe-ctrl" type="text" />
+          <div class="iframe-wrap">
+            <iframe src="http://www.google.com"></iframe>
+          </div>
+        </li>
+      </ol>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+
+</html>
